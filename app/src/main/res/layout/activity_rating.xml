@@ -43,7 +43,7 @@
         app:srcCompat="@drawable/pickup" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/pick_up_address"
         android:layout_width="217dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
@@ -52,14 +52,14 @@
         android:text="Uganda House"
         android:textColor="#555"
         android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/drop_off_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/pick_up_time"
         android:layout_width="42dp"
         android:layout_height="17dp"
         android:layout_marginEnd="30dp"
@@ -67,11 +67,11 @@
         android:layout_marginTop="29dp"
         android:text="20:30"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/pick_up_address"
         app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/drop_off_address"
         android:layout_width="217dp"
         android:layout_height="17dp"
         android:layout_marginBottom="20dp"
@@ -84,10 +84,10 @@
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="@+id/include"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/pick_up_address" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/drop_off_time"
         android:layout_width="42dp"
         android:layout_height="17dp"
         android:layout_marginBottom="20dp"
@@ -98,8 +98,8 @@
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/drop_off_address"
+        app:layout_constraintTop_toBottomOf="@+id/pick_up_time"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -116,7 +116,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/drop_off_address" />
 
     <View
         android:id="@+id/view2"
@@ -158,7 +158,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/distance_charge"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:layout_marginStart="74dp"
@@ -168,7 +168,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/distance_fare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
@@ -176,21 +176,21 @@
         android:layout_marginTop="8dp"
         android:text="10,000 ugx"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/distance_charge"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/time_charge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginTop="12dp"
         android:text="55"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/distance_charge" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/time_fare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -198,8 +198,8 @@
         android:layout_marginTop="13dp"
         android:text="6,500 ugx"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintStart_toEndOf="@+id/time_charge"
+        app:layout_constraintTop_toBottomOf="@+id/distance_fare" />
 
     <View
         android:id="@+id/view3"
@@ -230,7 +230,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/total_fare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="35dp"
@@ -255,14 +255,14 @@
         android:progressTint="#FFFF00"
         android:rating="4"
         android:stepSize="1"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button_submit_rating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_submit_rating"
         android:layout_width="285dp"
         android:layout_height="45dp"
         android:layout_marginBottom="25dp"
