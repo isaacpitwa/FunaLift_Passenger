@@ -8,6 +8,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -24,10 +25,17 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        MarkerOptions destination_marker= new MarkerOptions().position(new LatLng(0.293610,32.609270));
+        destination_marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.pickup));
+
+        MarkerOptions pick_up_marker =new MarkerOptions().position(new LatLng(0.315770,32.575859));
+        pick_up_marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.dropoff));
+
         mMap=googleMap;
-        LatLng initial_pointer =new LatLng(0.347596, 32.582520);
-        mMap.addMarker(new MarkerOptions().position(initial_pointer));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(initial_pointer,15));
+       // LatLng initial_pointer =new LatLng(0.347596, 32.582520);
+        mMap.addMarker(destination_marker);
+        mMap.addMarker(pick_up_marker);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(destination_marker.getPosition(),15));
 
     }
 }
