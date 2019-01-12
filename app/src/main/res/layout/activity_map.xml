@@ -96,7 +96,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/two_curved_edges_green"
-                android:src="@drawable/arrow-right"
+                android:src="@drawable/arrow_right"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/view2"
                 app:layout_constraintTop_toTopOf="parent" />
