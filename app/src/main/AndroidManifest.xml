@@ -52,7 +52,8 @@
             android:name=".CancelTrip2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DriverAvailablePassengers" />
-        <activity android:name=".DriverPayments"></activity>
+        <activity android:name=".DriverPayments" />
+        <activity android:name=".DriverWelcome"></activity>
     </application>
 
 </manifest>
